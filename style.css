@@ -1,0 +1,388 @@
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* consistent sizing */
+}
+
+/* ---------- BODY ---------- */
+body {
+  background-color: #fcf9ea;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: white;
+  border: 0.625rem solid black; /* 10px */
+  text-align: center;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 1rem; /* spacing */
+}
+
+header h1 {
+  font-size: 2rem; /* desktop */
+}
+
+header h2 {
+  font-size: 1.5rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 12.5rem; /* 200px */
+  height: auto;
+  margin: 0.5rem auto;
+  display: block; /* centered */
+}
+
+/* ---------- GRID LAYOUT ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* desktop zig-zag 2-column layout */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* ---------- SHARED BASE CLASSES ---------- */
+.content-base {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 2rem;
+}
+
+.left-side-base {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.ml-left-side {
+  gap: 1rem;
+}
+
+.right-side-base {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  font-size: 1.05rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.text-base {
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* ---------- SECTION SPECIFIC CONTAINERS ---------- */
+.tlcontent {
+  grid-column: 1;
+  grid-row: 1;
+  min-height: 12.5rem; /* 200px, prevents overflow */
+  align-items: stretch;
+  margin-left: auto;
+  margin-right: 0;
+  transform: translateX(6.25rem); /* 100px */
+  background-color: #bfecff;
+}
+
+.mrcontent {
+  grid-column: 2;
+  grid-row: 2;
+  align-items: flex-start;
+  margin-left: 0;
+  margin-right: auto;
+  transform: translateX(-3.125rem); /* -50px */
+  background-color: #ebd6fb;
+}
+
+.mlcontent {
+  grid-column: 1;
+  grid-row: 3;
+  margin-left: auto;
+  margin-right: 0;
+  transform: translateX(3.125rem); /* 50px */
+  background-color: #fffa8d;
+}
+
+.rbcontent {
+  grid-column: 2;
+  grid-row: 4;
+  gap: 7rem;
+  margin-left: 0;
+  margin-right: auto;
+  transform: translateX(-1.25rem); /* -20px */
+  background-color: #ffd1e3;
+}
+
+.blcontent {
+  grid-column: 1;
+  grid-row: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10rem;
+  transform: translateX(4.375rem); /* 70px */
+  padding: 1rem;
+  background-color: #e0f7fa;
+}
+
+/* ---------- RIGHT SIDES ---------- */
+.tl-right-side,
+.ml-right-side,
+.rb-right-side,
+.mr-right-side {
+  border: 0.125rem dashed purple;
+  border-radius: 2rem;
+}
+
+.tl-right-side {
+  justify-content: center;
+}
+
+.mr-right-side {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ml-right-side {
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.rb-right-side {
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+.title {
+  font-family: "Joti One", serif;
+  color: white;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 400;
+  -webkit-text-stroke: 1.5px black;
+}
+
+.paragraph {
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  overflow-wrap: break-word; /* prevent overflow */
+}
+
+.mlcontent p {
+  margin-top: 0.5rem;
+}
+
+.rb-right-side ul li {
+  margin-bottom: 0.2rem;
+  list-style: none;
+}
+
+/* ---------- BUTTONS ---------- */
+.button-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: blueviolet;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.3125rem; /* 5px */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.button-link:hover {
+  background-color: #ff8f8f;
+}
+
+.button-link-left {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ff9d3d;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.3125rem; /* 5px */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.button-link-left:hover {
+  background-color: #8ca9ff;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12.5rem; /* 200px */
+  padding: 0 1.25rem;
+  gap: 6.25rem; /* 100px */
+  background-color: white;
+  border: 0.625rem solid black; /* 10px */
+  text-align: center;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.footertitle {
+  margin: 0;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 1.875rem; /* 30px */
+}
+
+.footer-buttons a {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: aquamarine;
+  color: blue;
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.footer-buttons a:hover {
+  background-color: #7fffd4;
+}
+
+.footer-buttons a:active {
+  transform: translateY(0);
+}
+
+/* ---------- LANGUAGES ---------- */
+.blcontent .title {
+  margin: 0;
+}
+
+.blcontent .flags {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.blcontent .flag {
+  width: 3.125rem; /* 50px */
+  height: auto;
+  border-radius: 0.3125rem;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* Tablet and small tablets: stack containers into one column but keep desktop size for larger tablets */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr; /* single column */
+    padding: 1rem;
+  }
+
+  /* Reset transforms and auto-center containers */
+  .tlcontent,
+  .mrcontent,
+  .mlcontent,
+  .rbcontent,
+  .blcontent {
+    grid-column: 1;
+    grid-row: auto;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+  }
+
+  /* Stack content inside each container vertically and centered */
+  .content-base {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-side-base,
+  .right-side-base {
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .right-side-base {
+    width: 100%;
+  }
+
+  /* Profile image smaller and centered */
+  .profile-img {
+    width: 10rem; /* 160px */
+    margin: 0.5rem auto;
+  }
+
+  /* Language flags stacking */
+  .blcontent {
+    flex-direction: column;
+    transform: none;
+    gap: 0.5rem;
+  }
+
+  .blcontent .flags {
+    justify-content: center;
+  }
+
+  /* Footer responsive */
+  .footer {
+    flex-direction: column;
+    height: auto;
+    gap: 1.25rem; /* 20px */
+    padding: 1rem;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+    gap: 0.625rem; /* 10px */
+    align-items: center;
+  }
+
+  /* Header responsive */
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile phones: strict one-column stacking, smaller images and font-size */
+@media (max-width: 767px) {
+  .profile-img {
+    width: 9.375rem; /* 150px */
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+  }
+}
